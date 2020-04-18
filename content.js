@@ -21,7 +21,7 @@ function script() {
       if (settings.url.startsWith("/inbox/posts?")) {
         console.log("/inbox/posts", settings, xhr);
 
-        savePostRefsToCache(responseJSON.result.posts_data);
+        savePostRefsToCache(xhr.responseJSON.result.posts_data);
       }
     });
   });
